@@ -1,0 +1,8 @@
+bower_components/jquery/dist/jquery.js
+bower_components/react/react.js
+js/contrib/*.js
+js/tracula-ns.js
+js/tracula/*.js
+js/react_components/src/ticket/*.js
+js/react_components/src/*.js
+js/tracula.js

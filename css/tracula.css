@@ -1,0 +1,49 @@
+[contenteditable=true] {
+  border: 1px solid white;
+}
+[contenteditable=true]:hover {
+  border: 1px dotted gray;
+}
+
+nav button {
+  margin-left: 20px;
+}
+
+nav button, nav input {
+  margin-top: 5px;
+}
+
+#container{
+  margin: auto;
+  width: 950px;
+}
+/**
+Theme colours
+https://kuler.adobe.com/Blue-and-green-for-web-2-color-theme-3369501/edit/?copy=true&base=3&rule=Custom&selected=2&name=Copy%20of%20Blue%20and%20green%20for%20web%202&mode=rgb&rgbvalues=1,1,1,0.5686274509803921,0.8784313725490196,0.9450980392156862,0.07058823529411765,0.6392156862745098,0.788235294117647,0.2,0.19607843137254902,0.17647058823529413,0.592156862745098,0.803921568627451,0.2235294117647059&swatchOrder=0,1,2,3,4
+
+#EB6C55 - jetstrap top bar color
+#222222 - adjacent rich black
+
+E0FFB3
+61C791
+31797D
+2A2F36
+F23C55
+
+.navbar, .navbar a {
+  background-color: #EB6C55;
+  border-radius:0px;
+  color: rgba(255, 255, 255, 0.8);
+}
+.navbar button {
+    background-color: #222222;
+    border-color: rgba(255,255,255,0.35);
+}
+
+.btn-success {
+  background-color: #97CD39;
+}
+
+.ticket-title {
+  background-color: #97CD39; 
+}*/
