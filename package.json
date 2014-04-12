@@ -19,5 +19,8 @@
     "url": "https://github.com/mfrawley/tracula-client/issues"
   },
   "homepage": "https://github.com/mfrawley/tracula-client",
-  "private" : true
+  "private": true,
+  "devDependencies": {
+    "browserify": "~3.41.0"
+  }
 }

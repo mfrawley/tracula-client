@@ -1,3 +1,4 @@
+
 Tracula.Api = {
 	config : Tracula.Config,
   _createAuthHeaders : function(username, password) {
@@ -13,14 +14,19 @@ Tracula.Api = {
 	},
 	get : function(resource, success) {
     var c = this.config;
-    var userinfo = Tracula.Session.get('userinfo');
 
-
-    $.ajax(this.buildUrlForResource(resource), {
-      type : 'GET',
-      success : success,
-      dataType : c.dataType,
-      headers : this._createAuthHeaders(userinfo.username, userinfo.password)});
+    if(Tracula.Session.loggedIn()) {
+      var userinfo = Tracula.Session.get('userinfo');
+      
+      $.ajax(this.buildUrlForResource(resource), {
+        type : 'GET',
+        success : success,
+        dataType : c.dataType,
+        headers : this._createAuthHeaders(userinfo.username, userinfo.password)});  
+    } else {
+      Tracula.History.pushState({}, 'Logout', '/logout');
+    }
+    
   },
   post : function(resource, data, success) {
     var c = this.config;
