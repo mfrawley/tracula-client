@@ -1,7 +1,7 @@
 tracula-client
 ==============
 
-HTML5 client for the Tracula API
+HTML5 client for the Tracula https://github.com/mfrawley/tracula API
 
 Rake Tasks
 ==========
