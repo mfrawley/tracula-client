@@ -5,6 +5,8 @@ CLOSURE_OPTIMIZATIONS = "WHITESPACE_ONLY"
 OUTPUT_FILE = 'js/build/tracula.js'
 
 task :default => [:compile]
+
+desc "Compile the js mentioned in the menifest using closure"
 task :compile do
   files = process_manifest
   # puts files
