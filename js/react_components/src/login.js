@@ -8,7 +8,7 @@ var Login  = React.createClass( {
 
     Tracula.Api.Auth.login(username, password, function(data) {
       Tracula.Session.set('userinfo', {username : username, password : password});
-      window.location = '/';
+      Tracula.History.pushState({}, 'Home', '/');
     });
   },
   render : function() {

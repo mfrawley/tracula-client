@@ -26,7 +26,7 @@ var NavBar  = React.createClass( {
       Tracula.Api.Ticket.get(searchNum, function(data) {
         // Tracula.History.pushState(data, data.summary, '/ticket/'+searchNum);
         //should work with popstate
-        Tracula.History.go('/ticket/' + searchNum);
+        Tracula.History.pushState(data, data.summary, '/ticket/' + searchNum);
       });
     }
   },
@@ -36,12 +36,11 @@ var NavBar  = React.createClass( {
   createTicketAction : function(e) {
     e.preventDefault();
     console.log('createTicketAction');
-    window.location = '/ticket/create';
+    Tracula.History.pushState({}, 'Create Ticket', '/ticket/create');
   },
   logoutAction : function(e) {
     e.preventDefault();
-    //Tracula.History.pushState({}, 'logout', '/logout');
-    window.location = '/logout';
+    Tracula.History.pushState({}, 'Logout', '/logout');
   },
   loginBtn : function() {
     var d = React.DOM;

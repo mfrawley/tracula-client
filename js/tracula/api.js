@@ -1,10 +1,5 @@
 Tracula.Api = {
-	config : {
-		protocol : window.location.protocol,
-		host : window.location.host,
-		pathPrefix : '/api',
-    dataType : 'json'
-	},
+	config : Tracula.Config,
   _createAuthHeaders : function(username, password) {
     return {
         'Authorization' : 'Basic ' + utf8_to_b64(username + ':' + password)
